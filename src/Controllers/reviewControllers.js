@@ -99,20 +99,20 @@ const updateReview = async(req,res)=>{
             return res.status(400).send({status : false, message : 'bookId is not present'})
         }
 
-        let validateBookId = mongoose.isValidObjectId(bookId)
+       // let validateBookId = mongoose.isValidObjectId(bookId)
 
-        if(!validateBookId){
-           return res.status(400).send({status : false, message : 'this is not a valid book Id'})
-        }
+        // if(!validateBookId){
+        //    return res.status(400).send({status : false, message : 'this is not a valid book Id'})
+        // }
 
         if(!reviewId){
             return res.status(400).send({status : false, message : 'reviewId is not present'})
         }
 
-        let validatereviewId = mongoose.isValidObjectId(reviewId)
-        if(!validatereviewId){
-           return res.status(400).send({status : false, message : 'this is not a valid review Id'})
-        }
+        //let validatereviewId = mongoose.isValidObjectId(reviewId)
+        // if(!validatereviewId){
+        //    return res.status(400).send({status : false, message : 'this is not a valid review Id'})
+        // }
         
         let findBook = await book.find({bookId})
 
